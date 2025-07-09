@@ -9,7 +9,10 @@
     
 
 
-<?php
+<?
+/* Afficher les nombres compris entre
+ 0 et 1337 sauf exceptions */
+ 
 for ($i = 0;$i < 1338;$i ++) {
     switch ($i) {
         case 26:
