@@ -1,5 +1,5 @@
 <?php
-/* Multiples de 3, 5 et (3 et 5) */
+/* Multiples de 3, 5 et (3 et 5) entre 0 et 100*/
 
 for ($i = 0; $i <= 100; $i++) {
     switch($i) {
@@ -12,7 +12,6 @@ for ($i = 0; $i <= 100; $i++) {
         case gettype($i / 5) == "integer":
             echo "Multiple de 5<br />";
             break;
-
         default:
             echo $i . "<br />";
             break;
