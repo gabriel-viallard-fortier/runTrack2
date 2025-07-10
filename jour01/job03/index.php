@@ -46,7 +46,7 @@ $variables = [
         <?php foreach ($variables as $name => $value): ?>
         <tr>                    
 
-            <td><?php echo gettype(value: $value); ?></td>
+            <td><?php echo gettype($value); ?></td>
             <td><?php echo $name; ?></td>
             <td><?php if (is_bool( $value)) {
                     echo $value ? 'true':'false';
