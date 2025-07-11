@@ -14,10 +14,10 @@ for ($i = 0; $i < count($tableau); $i ++) {
 
     if (gettype($tableau[$i] / 2) == 'integer')
     {
-        echo $i . " est un nombre paire<br>";
+        echo $tableau[$i] . " est un nombre paire<br>";
     }
     else {
-        echo $i . " est un nombre impaire<br>";
+        echo $tableau[$i] . " est un nombre impaire<br>";
     }
 
 

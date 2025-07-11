@@ -1,16 +1,11 @@
 <?php
 
 
-$varBool = true;
+$varBool = "coucou salut  ";
 $varInt = 10;
 $varFloat = 2.14;
 $varString = "Bonjour";
 
-
-$fonctionArray = [
-        [1,2],
-        [3,4],
-];
 
 
 $variables = [
