@@ -1,4 +1,6 @@
 <?php
+/* Créez un algorithme qui parcourt, compte et affiche le nombre de caractères présents
+dans cette chaîne. */
 
 $str = "Dans l'espace, personne ne vous entend crier.";
 $count = 0;
@@ -12,7 +14,7 @@ for ($i = 0; $i < strlen($str) ; $i++) {
         $count ++;
     }
 }
-echo "Votre chaine contient " . $count . " caracteres.";
+echo "$str contient " . $count . " caracteres.";
 
 
 ?>

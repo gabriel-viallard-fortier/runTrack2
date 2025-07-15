@@ -1,6 +1,6 @@
 <?php
 
-$hauteur = 40;
+$hauteur = 10;
 
 
 //monospace

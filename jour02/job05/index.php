@@ -2,7 +2,6 @@
 <?php
 
 /* Nombres premiers entre 0 et 100
-LEVEL = IMPENSABLE 
 
 Un nombre est premier si le nombre de diviseurs
 est >= 3
@@ -13,7 +12,7 @@ est >= 3
 
     for ($n = 0; $n <=1000; $n ++)
     {
-        //on initialise le score à chaque boucle pour faire 1000 scores
+        //on initialise le score à chaque boucle pour faire 1000 tests
         $score = 0;
 
         // On teste de le diviser 1000 fois par 1 à 1000
