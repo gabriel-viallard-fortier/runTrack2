@@ -19,11 +19,11 @@ $voyelles = [
 
 //on parcourt $str
 
-for ($i = 0 ; $i < strlen($str) ; $i ++) {
+for ($i = 0 ; isset($str[$i]) ; $i ++) {
 
 
     // on parcourt les voyelles
-    for ($x = 0 ; $x < count($voyelles) ; $x ++) {
+    for ($x = 0 ; isset($voyelles[$x]) ; $x ++) {
 
         // si le caractere parcouru dans $str est présent dans voyelles
         //on l'affiche

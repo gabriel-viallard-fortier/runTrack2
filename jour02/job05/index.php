@@ -4,7 +4,7 @@
 /* Nombres premiers entre 0 et 100
 
 Un nombre est premier si le nombre de diviseurs
-est >= 3
+est = 2
 */
 
 
@@ -19,7 +19,7 @@ est >= 3
         for ($i = 1; $i <=1000; $i ++)
         {
             // On stocke un score qui doit être supérieur à 2
-            if (gettype($n / $i ) == "integer"):
+            if ($n % $i  == 0):
                 $score ++;
             endif;
         }
@@ -37,7 +37,7 @@ est >= 3
             echo $n . " <mark>est un nombre premier</mark>" . "<br />";
             break;
         case $score == 1: 
-            echo $n ." n'est divisible que par lui-même" . "<br />";
+            echo $n ." <b> n'est divisible que par lui-même</b>" . "<br />";
             break;
 
         }

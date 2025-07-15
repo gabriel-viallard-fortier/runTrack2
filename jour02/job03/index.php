@@ -11,11 +11,11 @@ for ($i = 0; $i < 101;$i ++)
             echo "<i>" . $i . "</i><br />";
             break;
         case ($i >= 25 && $i <= 50):
-            if ($i == 42) echo "La Plateforme_";
+            if ($i == 42) echo "La Plateforme_<br>";
             else echo "<u>" . $i . "</u><br />";
             break;
         default:
-            echo $i;
+            echo $i . "<br>";
             break;
         }
 }

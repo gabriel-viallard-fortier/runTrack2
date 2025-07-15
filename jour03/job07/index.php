@@ -10,7 +10,7 @@ $str = "Certaines choses changent, et d'autres ne changeront jamais.";
 
     }
 
-    echo $str[$i % strlen($str)] . "<b>";
+    echo $str[0] . "<b>";
         
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 
 
-$varBool = "coucou salut  ";
+$varBool = false;
 $varInt = 10;
 $varFloat = 2.14;
 $varString = "Bonjour";

@@ -32,8 +32,6 @@ $dictionnaire = [
     $nombreConsonnes = 0;
 
 
-    // on convertie la chaine en array et
-    // on convertie en lowercases
 
 
 ?>
@@ -42,25 +40,28 @@ $dictionnaire = [
             <?php
 
 
+                // on convertie en lowercases
 
                 $str = strtolower($str);
 
                  
                 //on parcourt $str
 
-                for ($i = 0 ; $i < strlen($str) ; $i ++) {
+                for ($i = 0 ; isset($str[$i]) ; $i ++) {
 
-                        // si le caractere parcouru dans $str est présent dans voyelles
-                        //on l'affiche
-                        if (in_array($str[$i] , $dictionnaire['voyelles'])) {
+                // si le caractere parcouru dans $str est présent dans voyelles
+                //on le compte
+                    foreach ($dictionnaire['voyelles'] as $char) {
+                        if ($str[$i] == $char) {
                             $nombreVoyelles ++;
-                        }
-                        elseif (in_array($str[$i] , $dictionnaire['consonnes'])) {
-                            $nombreConsonnes ++;
-                        }
+                        }   
                     }
-
-
+                    foreach ($dictionnaire['consonnes'] as $char) {
+                        if ($str[$i] == $char) {
+                            $nombreConsonnes ++;
+                        } 
+                    } 
+                }
 
 
                 echo $nombreVoyelles . "<br>";
@@ -72,6 +73,7 @@ $dictionnaire = [
                 echo $nombreConsonnes . "<br>";
                 ?>
         </td>
+
     </tr>
 
 </table>

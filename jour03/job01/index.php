@@ -13,9 +13,9 @@ $tableau = [
 
 
 
-for ($i = 0; $i < count($tableau); $i ++) {
+for ($i = 0; isset($tableau[$i]); $i ++) {
 
-    if (gettype($tableau[$i] / 2) == 'integer') {
+    if ($tableau[$i] % 2 == 0) {
         echo $tableau[$i] . " est un nombre paire<br>";
     }
 

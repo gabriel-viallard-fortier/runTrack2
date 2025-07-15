@@ -7,14 +7,14 @@ $count = 0;
 
 
 // une boucle de la taille de la chaine
-for ($i = 0; $i < strlen($str) ; $i++) {
+for ($i = 0; isset($str[$i]) ; $i++) {
     
     // Si le caractere $i existe le compteur augmente
     if (isset($str[$i])) {
         $count ++;
     }
 }
-echo "$str contient " . $count . " caracteres.";
+echo " <b>''$str''</b> <br> contient " . $count . " caracteres.";
 
 
 ?>
