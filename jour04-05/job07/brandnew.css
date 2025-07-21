@@ -1,0 +1,201 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #ffffff;
+    background-image: linear-gradient(23deg,black, yellow, rgba(0,0,0,.5));
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.4em;
+
+    overflow-x: hidden;
+
+}
+.studio {
+
+
+    background: url("electrypnose_studio_2024.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+        height: 100vh;
+
+
+
+}
+.visage {
+    background: url("Electrypnose.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 20vh;
+
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 10px 10px white;
+    background-image: linear-gradient(157deg,#00b7ff, rgba(0, 0, 0, 0.9), #207a9d);
+
+
+}
+h1 {
+    margin: 2rem;
+    font-size: 2rem;
+}
+h2 {
+    color: yellow;
+    font-size: 1.5rem;
+}
+.navbar {
+    display: flex;
+}
+ul {
+    position: absolute;
+    list-style: none;
+}
+.navbar li {
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: rgb(255, 255, 0);
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+
+}
+
+.dropdown {
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    width: 200px;
+
+}
+.dropdown-content a {
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+ul li:hover {
+    background-color:#c9c9c9;
+
+}
+
+.dropdown:hover .dropdown-content {
+
+    position: relative;
+    background-color: #626262;
+    right: 95px;
+    top: 20px;
+    display: block;
+    border: solid white 2px;
+
+}
+.dropdown .dropdown-content:hover {
+    background-color:#3a5965;
+}
+
+#main-photo {
+
+    width: 512px;
+    height: auto;
+    border-radius: 50px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15%;
+}
+.box {
+    width: 100%;
+    border: 5px solid #207a9d;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    border-radius: 20px;
+    background-image: linear-gradient(157deg,rgb(190, 149, 25), rgba(0, 0, 0, 0.4), #7B631EFF);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+
+}
+.box:hover {
+    background-color: #3a5965;
+    transition: all 0.5s ease-in-out;
+}
+ul, a {
+    cursor: pointer;
+}
+a:visited{
+    color: rgb(157, 157, 25);
+}
+
+fieldset, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 2rem;
+
+    border-radius: 10px;
+
+}
+input,select,textarea {
+    background-color:#0d4156 ;
+    color: white;
+    margin: 0.2rem;
+    padding: 8px;
+    width: 100%;
+
+}
+textarea {
+    height: 120px;
+}
+
+.center {
+text-align: center;
+}
+
+
+.slider {
+    width: 100%;
+    height: 90%;
+	margin: auto;
+	overflow:hidden;
+	
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-512px * 4))}
+}
+
+.slide-track {
+    animation: scroll 20s ease-in-out infinite;
+    display: flex;
+
+}
+
+.slide {
+    height: 512px;
+    width: 1024px;
+}

@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #ffffff;
+    background-image: linear-gradient(23deg,black, yellow, rgba(0,0,0,.5));
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.4em;
+
+    overflow-x: hidden;
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15%;
+}
+.box {
+    width: 100%;
+    border: 5px solid #207a9d;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    border-radius: 20px;
+    background-image: linear-gradient(157deg,rgb(190, 149, 25), rgba(0, 0, 0, 0.4), #7B631EFF);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+
+}
+
+fieldset, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-bottom: 2rem;
+
+    border-radius: 10px;
+
+}
+input,select,textarea {
+    background-color:#0d4156 ;
+    color: white;
+    margin: 0.2rem;
+    padding: 8px;
+    width: 100%;
+
+}
+textarea {
+    height: 120px;
+}
+
+.center {
+text-align: center;
+}
+
+
+.slider {
+    width: 100%;
+    height: 90%;
+	margin: auto;
+	overflow:hidden;
+	
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-512px * 4))}
+}
+
+.slide-track {
+    animation: scroll 20s ease-in-out infinite;
+    display: flex;
+
+}
+
+.slide {
+    height: 512px;
+    width: 1024px;
+}
