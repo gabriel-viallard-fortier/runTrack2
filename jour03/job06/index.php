@@ -4,17 +4,18 @@ $str = "Les choses que l'on possède finissent par nous posséder.";
 
 // On veut retourner à l'envers cette chaine de caracteres
 
+$longueurChaine = 0;
 
-$tableau = mb_str_split($str);
+for ($i = 0; isset($str[$i]); $i++) {
+        $longueurChaine = $i;
+}
 
-for ($i = strlen($str); $i >= 0; $i--)
-    {
-        echo $tableau[$i];
-    }
 
-    echo "<br><br>";
-    echo "<b>" . $str . "</b><br><br>";
+for ($i = $longueurChaine ; $i >= 0 ; $i --)
+{
+    echo $str[$i];
+}
 
-    //fonction systeme
-    echo strrev($str);
+
+
 ?>
