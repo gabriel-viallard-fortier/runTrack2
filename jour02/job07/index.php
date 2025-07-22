@@ -1,6 +1,6 @@
 <?php
 
-$hauteur = 10;
+$hauteur = 20;
 
 
 //monospace
@@ -27,5 +27,38 @@ for ($y = 1 ; $y <= $hauteur; $y ++) {
      }
     echo "<br>";
 }
+echo "<br>";
+
+
+
+
+for ($y = 1 ; $y <= $hauteur ; $y ++) {
+
+    for ($x = 1 ; $x <= $hauteur - $y ; $x ++) {
+            echo "&nbsp";
+    }
+
+    for ($x = 1 ; $x <= ($y * 2 - 1) ; $x ++) {
+
+            if ($x == 1) {
+                echo "/";
+            }
+            if ($x == 2 * $y - 1) {
+                echo "\\";
+            }
+            elseif ($y == $hauteur) {
+                echo "_";
+            }
+            else {
+                echo "&nbsp";
+            }
+    }
+    echo "<br>";
+}
+
+
+
+
 echo "</pre>";
+
 ?>
