@@ -7,20 +7,23 @@
 </head>
 <?php
 
-function gras($str) {
-    echo "<b>";
-}
 
-function cesar($str, $decalage) {
 
-    for ($i = 0 ; isset($str[$i]) ; $i ++) {
 
-        $str[$i] = $str[$i + 2];
+
+
+function plateforme($str) {
+    $mots = explode(" ", $str);
+
+    foreach ($mots as $mot) {
+        // Vérifie si le mot se termine par "me"
+        if (substr($mot, -2) === "me") {
+            echo $mot . "_ ";
+        } else {
+            echo $mot . " ";
+        }
     }
-
 }
-
-
 
 
 
@@ -31,7 +34,7 @@ switch ($_POST['option']) {
         gras($_POST['str']);
         break;
     case 'cesar':
-        cesar($_POST['str'], $decalage);
+        cesar($_POST['str'], 2);
         break;
     case 'plateforme':
         plateforme($_POST['str']);
