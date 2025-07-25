@@ -8,11 +8,59 @@
 <?php
 
 
+function gras($str) {
+    
+    $mots = explode(" ", $str);
+
+    foreach ($mots as $mot) {
+        if (IntlChar::isupper($mot[0])) {
+            echo "<b>" . $mot . "</b> ";
+        }
+        else {
+            echo $mot . " ";
+        }
+    }
+}
+
+function cesar($str, $decalage = 2) {
+    $phrase = str_split($str);
+
+    foreach ($phrase as $char) {
+
+        if ($char >= 'A' && $char <= 'Z') {
+            if (ord($char) + $decalage > 90) {
+                $char = ord($char + $decalage -26);
+                echo chr($char);
+
+            }
+            else {
+                $char = ord($char) +  $decalage;
+                echo chr($char);
+
+            }
+        }
+
+        elseif ($char >= 'a' && $char <= 'z') {
+            if (ord($char) + $decalage > 122) {
+                $char = ord($char) + $decalage - 26;
+                echo chr($char);
+
+            }
+            else {
+                $char = ord($char) + $decalage;
+                echo chr($char);
+
+            }
+            
+        }
+        else {
+            echo $char;
+        }
+    }
+}
 
 
-
-
-function plateforme($str) {
+function plateforme ($str) {
     $mots = explode(" ", $str);
 
     foreach ($mots as $mot) {
@@ -24,25 +72,6 @@ function plateforme($str) {
         }
     }
 }
-
-
-
-
-
-switch ($_POST['option']) {
-    case 'gras':
-        gras($_POST['str']);
-        break;
-    case 'cesar':
-        cesar($_POST['str'], 2);
-        break;
-    case 'plateforme':
-        plateforme($_POST['str']);
-        break;
-
-}
-
-
 ?>
 <body>
     <form method="post">
@@ -56,3 +85,22 @@ switch ($_POST['option']) {
     </form>    
 </body>
 </html>
+
+
+<?php
+
+if (isset ($_POST['option'])) {
+    switch ($_POST['option']) {
+        case 'gras':
+            gras($_POST['str']);
+            break;
+        case 'cesar':
+            cesar($_POST['str']);
+            break;
+        case 'plateforme':
+            plateforme($_POST['str']);
+            break;
+                    
+    }
+}
+?>

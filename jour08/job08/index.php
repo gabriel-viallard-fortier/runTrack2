@@ -8,8 +8,8 @@
         $nombreVisites = 0;
 
         //on recharge la page
-        header("Location: " . $_SERVER['PHP_SELF']);
-        
+        header("refresh: 1"); 
+            
         // et on quitte le script
         exit;
     }
@@ -17,10 +17,10 @@
     // sinon
     //  si le cookie n'est pas défini
         if (!isset ($_COOKIE["nombreVisites"])) {
-            // on initialise le comteur
+            // première visite
             $nombreVisites = 1;
         }
-        // si le cookie est défini, on l'incrémente
+        // si le cookie existe, on l'incrémente
         else {
             $nombreVisites = $_COOKIE["nombreVisites"] + 1;
         }
@@ -41,7 +41,7 @@
 </head>
 <body>
     <form method="post">
-        <button type="submit" name="reset">Reset</button>
+        <button type="submit" name="reset">Rafraichir & réinitialiser</button>
     </form>
 </body>
 </html>
