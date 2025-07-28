@@ -25,11 +25,10 @@
                 <div class="box">
                     <?php
                     echo "<pre>";
-
                         for ($y = 1 ; $y <= $_GET['hauteur'] ; $y ++) {
                         
                             for ($x = 1 ; $x <= $_GET['hauteur'] - $y ; $x ++) {
-                                echo "&nbsp";
+                                echo " ";
                             }
                             for ($x = 1 ; $x <= $y * 2 - 1 ; $x ++) {
                                 
@@ -47,9 +46,9 @@
                            
                         
                         }   
-                        for ($y = 1 ; $y <= $_GET['hauteur'] ; $y ++) {
+                        for ($y = 1 ; $y <= $_GET['hauteur'] ; $y++) {
 
-                            for ($x = 1 ; $x <= $_GET['largeur'] ; $x ++) {
+                            for ($x = 1 ; $x <= $_GET['largeur'] ; $x++) {
 
                                 if ($x == 1)  {
                                     echo "|";
@@ -61,15 +60,14 @@
                                     echo "_";
                                 }
                                 else {
-                                    echo "&nbsp";
+                                    echo " ";
                                 }
                             }   
 
       
                         }
+                        echo "</pre> Fonctionne avec Firefox et Opéra, pas avec Chrome.";
 
-
-                    echo "</pre>";
                     ?>
                 </div>
     </body>

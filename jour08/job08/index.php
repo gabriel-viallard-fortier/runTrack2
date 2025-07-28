@@ -9,7 +9,6 @@
 
         //on recharge la page
         header("refresh: 1"); 
-            
         // et on quitte le script
         exit;
     }
