@@ -2,15 +2,11 @@
     if (isset($_POST['reset'])) {
     // si on presse reset
 
-        setcookie("nombreVisites", "");
+        setcookie("nombreVisites", 111111111111111"");
         //on reinitialise le cookie
         
         $nombreVisites = 0;
 
-        //on recharge la page
-        header("refresh: 1"); 
-        // et on quitte le script
-        exit;
     }
     else {
     // sinon
