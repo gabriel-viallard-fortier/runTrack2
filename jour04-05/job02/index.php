@@ -25,7 +25,8 @@
                     <fieldset>
                         <legend>Coordonnées</legend>
                         <input name="email" type="email" placeholder="Email">
-                        <input name="tel" type="tel" placeholder="Telephone">
+                        <input name="telephon
+                        " type="tel" placeholder="Telephone">
                     </fieldset>
                     <fieldset>
                         <legend>Addresse</legend>
@@ -56,7 +57,7 @@
                     <tbody>
                         <?php
                             foreach ($_GET as $info => $valeur) {
-                                if (isset($_GET[$info])) {
+                                if (isset($_GET[$info]) && $_GET[$info] !== "") {
                                     echo "<tr>";
                                     echo "<td>" . htmlspecialchars($info) . "</td>";
                                     echo "<td>" . htmlspecialchars($valeur) . "</td>";

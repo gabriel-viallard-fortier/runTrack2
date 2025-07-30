@@ -47,13 +47,13 @@
             </div>
 <?php
 $nombreArguments = 0;
-$infos = ['civilite', 'prenom', 'nom', 'email', 'tel', 'pays', 'code-postal', 'addresse', 'numero-rue', 'objet', 'date'];
+$infos = ['civilite', 'prenom', 'nom', 'email', 'tel', 'pays', 'code-postal', 'addresse', 'numero-rue', 'objet', 'date', 'message'];
 
 foreach ($infos as $info)  {
-    if (isset($_GET[$info])) {
-    
+    if (isset($_GET[$info]) && $_GET["$info"] !== "") {
     $nombreArguments ++;
     }
+
 }
 
 echo "Le nombre d'arguments GET envoyé est: " . $nombreArguments;

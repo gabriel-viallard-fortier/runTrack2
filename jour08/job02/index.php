@@ -2,8 +2,8 @@
     if (isset($_POST['reset'])) {
     // si on presse reset
 
-        setcookie("nombreVisites", 111111111111111"");
-        //on reinitialise le cookie
+        setcookie("nombreVisites","");
+        //on reinitialise le cookie    
         
         $nombreVisites = 0;
 
@@ -22,8 +22,8 @@
 
         // on défini le cookie et on affiche le nombre de visites
         setcookie ("nombreVisites", $nombreVisites);
-        echo "Nombre de visites : " . $nombreVisites . "<br>";
     }
+        echo "Nombre de visites : " . $nombreVisites . "<br>";
 
     ?>
 

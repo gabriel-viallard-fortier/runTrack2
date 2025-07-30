@@ -55,14 +55,31 @@
                     </thead>
                     <tbody>
                         <?php
-                            foreach ($_POST as $info => $valeur) {
-                                if (isset($_POST[$info])) {
+
+
+                        $nombreArguments = 0;
+
+                        // on utilise une liste blanche pour éviter les injections de nouveaux champs
+                        $infos = ['civilite', 'prenom', 'nom', 'email', 'tel', 'pays', 'code-postal', 'addresse', 'numero-rue', 'objet', 'date', 'message'];
+
+                        //on compte les champs non vides envoyés par le formulaire
+                            foreach ($infos as $champ) {
+
+                                if (isset($_POST[$champ]) && $_POST[$champ] !== '') {
+
+                                    $nombreArguments ++;
+
                                     echo "<tr>";
-                                    echo "<td>" . htmlspecialchars($info) . "</td>";
-                                    echo "<td>" . htmlspecialchars($valeur) . "</td>";
+                                    echo "<td>" . htmlspecialchars($champ) . "</td>";
+                                    echo "<td>" . htmlspecialchars($_POST[$champ]) . "</td>";
+                                    // htmlspecialchars important ici pour echapper les caractères spéciaux et éviter les injections de script
+                                    // puisqu'on affiche les valeurs entrées par l'utilisateur dans input
+
                                     echo "</tr>";
                                 }
                             }
+                            echo "Nombre D'arguements non vides envoyés: " . $nombreArguments . "<br>";
+
                             ?>
                     </tbody>
                 </table>
