@@ -1,6 +1,6 @@
 <?php
     if (isset($_POST["connection"]) && $_POST["username"] !== "") {
-        $prenom = $_POST["username"];
+        $prenom = htmlspecialchars($_POST["username"]);
         setcookie("login", $prenom);
     }
     elseif (isset($_COOKIE["login"])) {
