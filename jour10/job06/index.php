@@ -9,6 +9,7 @@ $mysqli = mysqli_connect("", "root", "", "jour09");
 $result = mysqli_query($mysqli, "SELECT * FROM etudiants;");
 $fields = $result->fetch_fields();
 $rows = $result->fetch_all(MYSQLI_ASSOC);
+$nombreEtudiants = 0;
 ?>
 
 <!DOCTYPE html>
@@ -26,19 +27,16 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
   <table>
     <thead>
       <tr>
-        <?php foreach ($fields as $field):?>
-        <th><?= htmlspecialchars($field->name)?></th>
-          <?php endforeach;?>
+        <th>Superficie totale</th>
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($rows as $row):?>
-        <tr>
-          <?php foreach ($row as $data):?>
-          <td><?=$data?></td>
-          <?php endforeach;?>
-        </tr>
-        <?php endforeach;?>
+      <?php foreach ($rows as $row):
+        if (isset($row)):
+          $nombreEtudiants++;
+        endif;
+      endforeach;?>
+        <td><?=$nombreEtudiants?></td>
       </tbody>
 </table>
 

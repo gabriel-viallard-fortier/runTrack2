@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 
 
 $mysqli = mysqli_connect("", "root", "", "jour09");
-$result = mysqli_query($mysqli, "SELECT * FROM etudiants;");
+$result = mysqli_query($mysqli, "SELECT prenom, nom, naissance FROM etudiants WHERE sexe='femme';");
 $fields = $result->fetch_fields();
 $rows = $result->fetch_all(MYSQLI_ASSOC);
 ?>

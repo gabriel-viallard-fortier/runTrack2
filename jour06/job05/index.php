@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire changement style</title>    
     <?php
+
+    //on switch le <select> et on affiche le style selectionné
+    
     switch ($_GET['style']) {
         case "Style 1":?>
             <link rel="stylesheet" href="style1.css">
