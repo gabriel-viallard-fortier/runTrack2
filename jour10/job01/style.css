@@ -1,0 +1,11 @@
+body {
+    font-size: large;
+    text-align: center;
+}
+table {
+    width: 50%;
+    border: 4px solid black;
+}
+th {
+    border: 2px solid red;
+}

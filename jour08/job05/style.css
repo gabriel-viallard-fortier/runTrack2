@@ -1,0 +1,39 @@
+body {
+    color: white;
+    background-color: black;
+}
+
+button {
+    font-size: 2rem;
+    width : 150px;
+    height: 150px;
+    padding: 10%;
+    margin: auto auto;
+    box-shadow: 10px 10px 10px black;
+    background-color: rgba(32,32,32,.5);
+    color: red;
+
+}
+button:hover {
+    background-color:yellow;
+}
+table {
+    margin: auto auto;
+    padding:2%;
+    background-image: linear-gradient(black, grey, white);
+    border: yellow, solid, 1px;
+}
+.center {
+    text-align:center;
+    display: block;
+    color: white;
+    justify-content: center;
+}
+h3 {
+    color: green;
+}
+h4 {
+    color: red;
+}
+
+
