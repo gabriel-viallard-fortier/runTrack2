@@ -69,7 +69,7 @@ $dictionnaire = [
 
         </td>
         <td>
-                <?php
+                <?php 
                 echo $nombreConsonnes . "<br>";
                 ?>
         </td>
